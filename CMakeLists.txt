@@ -15,6 +15,7 @@ option( VARIANT_LITE_OPT_BUILD_EXAMPLES "Build variant-lite examples" OFF )
 project( variant_lite LANGUAGES CXX )
 
 set( package_name "variant-lite" )
+set (CMAKE_CXX_STANDARD 11)
 
 # Interface library:
 
