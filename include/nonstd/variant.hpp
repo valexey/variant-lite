@@ -1628,27 +1628,27 @@ private:
     type_index_t type_index;
 };
 
-template <class T, class T0, class T1, class T2, class T3, class T4, class T5, class T6 >
+template <class T, class T0, class T1, class T2, class T3, class T4, class T5, class T6 , class T7, class T8, class T9, class T10, class T11, class T12, class T13, class T14, class T15, class T16, class T17, class T18, class T19, class T20, class T21, class T22, class T23, class T24, class T25, class T26, class T27, class T28, class T29>
 inline bool holds_alternative( variant<T0, T1, T2, T3, T4, T5, T6> const & v ) variant_noexcept
 {
     return v.index() == v.template index_of<T>();
 }
 
-template< class R, class T0, class T1, class T2, class T3, class T4, class T5, class T6 >
-inline R & get( variant<T0, T1, T2, T3, T4, T5, T6> & v, nonstd_lite_in_place_type_t(R) = in_place<R> )
+template< class R, class T0, class T1, class T2, class T3, class T4, class T5, class T6 , class T7, class T8, class T9, class T10, class T11, class T12, class T13, class T14, class T15, class T16, class T17, class T18, class T19, class T20, class T21, class T22, class T23, class T24, class T25, class T26, class T27, class T28, class T29>
+inline R & get( variant<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29> & v, nonstd_lite_in_place_type_t(R) = in_place<R> )
 {
     return v.template get<R>();
 }
 
-template< class R, class T0, class T1, class T2, class T3, class T4, class T5, class T6  >
-inline R const & get( variant<T0, T1, T2, T3, T4, T5, T6> const & v, nonstd_lite_in_place_type_t(R) = in_place<R> )
+template< class R, class T0, class T1, class T2, class T3, class T4, class T5, class T6, class T7, class T8, class T9, class T10, class T11, class T12, class T13, class T14, class T15, class T16, class T17, class T18, class T19, class T20, class T21, class T22, class T23, class T24, class T25, class T26, class T27, class T28, class T29>
+inline R const & get( variant<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29> const & v, nonstd_lite_in_place_type_t(R) = in_place<R> )
 {
     return v.template get<R>();
 }
 
-template< std::size_t I, class T0, class T1, class T2, class T3, class T4, class T5, class T6 >
-inline typename variant_alternative< I, variant<T0, T1, T2, T3, T4, T5, T6> >::type &
-get( variant<T0, T1, T2, T3, T4, T5, T6> & v, nonstd_lite_in_place_index_t(I) = in_place<I> )
+template< std::size_t I, class T0, class T1, class T2, class T3, class T4, class T5, class T6, class T7, class T8, class T9, class T10, class T11, class T12, class T13, class T14, class T15, class T16, class T17, class T18, class T19, class T20, class T21, class T22, class T23, class T24, class T25, class T26, class T27, class T28, class T29>
+inline typename variant_alternative< I, variant<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29> >::type &
+get( variant<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29> & v, nonstd_lite_in_place_index_t(I) = in_place<I> )
 {
     if ( I != v.index() )
     {
@@ -1658,9 +1658,9 @@ get( variant<T0, T1, T2, T3, T4, T5, T6> & v, nonstd_lite_in_place_index_t(I) = 
     return v.template get<I>();
 }
 
-template< std::size_t I, class T0, class T1, class T2, class T3, class T4, class T5, class T6 >
-inline typename variant_alternative< I, variant<T0, T1, T2, T3, T4, T5, T6> >::type const &
-get( variant<T0, T1, T2, T3, T4, T5, T6> const & v, nonstd_lite_in_place_index_t(I) = in_place<I> )
+template< std::size_t I, class T0, class T1, class T2, class T3, class T4, class T5, class T6 , class T7, class T8, class T9, class T10, class T11, class T12, class T13, class T14, class T15, class T16, class T17, class T18, class T19, class T20, class T21, class T22, class T23, class T24, class T25, class T26, class T27, class T28, class T29>
+inline typename variant_alternative< I, variant<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29> >::type const &
+get( variant<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29> const & v, nonstd_lite_in_place_index_t(I) = in_place<I> )
 {
     if ( I != v.index() )
     {
@@ -1670,38 +1670,38 @@ get( variant<T0, T1, T2, T3, T4, T5, T6> const & v, nonstd_lite_in_place_index_t
     return v.template get<I>();
 }
 
-template< class T, class T0, class T1, class T2, class T3, class T4, class T5, class T6 >
+template< class T, class T0, class T1, class T2, class T3, class T4, class T5, class T6, class T7, class T8, class T9, class T10, class T11, class T12, class T13, class T14, class T15, class T16, class T17, class T18, class T19, class T20, class T21, class T22, class T23, class T24, class T25, class T26, class T27, class T28, class T29>
 inline typename detail::add_pointer<T>::type
-get_if( variant<T0, T1, T2, T3, T4, T5, T6> * pv, nonstd_lite_in_place_type_t(T) = in_place<T> )
+get_if( variant<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29> * pv, nonstd_lite_in_place_type_t(T) = in_place<T> )
 {
     return ( pv->index() == pv->template index_of<T>() ) ? &get<T>( *pv ) : variant_nullptr;
 }
 
-template< class T, class T0, class T1, class T2, class T3, class T4, class T5, class T6 >
+template< class T, class T0, class T1, class T2, class T3, class T4, class T5, class T6 , class T7, class T8, class T9, class T10, class T11, class T12, class T13, class T14, class T15, class T16, class T17, class T18, class T19, class T20, class T21, class T22, class T23, class T24, class T25, class T26, class T27, class T28, class T29>
 inline typename detail::add_pointer<const T>::type
-get_if( variant<T0, T1, T2, T3, T4, T5, T6> const * pv, nonstd_lite_in_place_type_t(T) = in_place<T>)
+get_if( variant<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29> const * pv, nonstd_lite_in_place_type_t(T) = in_place<T>)
 {
     return ( pv->index() == pv->template index_of<T>() ) ? &get<T>( *pv ) : variant_nullptr;
 }
 
-template< std::size_t I, class T0, class T1, class T2, class T3, class T4, class T5, class T6 >
-inline typename detail::add_pointer< typename variant_alternative<I, variant<T0, T1, T2, T3, T4, T5, T6> >::type >::type
-get_if( variant<T0, T1, T2, T3, T4, T5, T6> * pv, nonstd_lite_in_place_index_t(I) = in_place<I> )
+template< std::size_t I, class T0, class T1, class T2, class T3, class T4, class T5, class T6 , class T7, class T8, class T9, class T10, class T11, class T12, class T13, class T14, class T15, class T16, class T17, class T18, class T19, class T20, class T21, class T22, class T23, class T24, class T25, class T26, class T27, class T28, class T29>
+inline typename detail::add_pointer< typename variant_alternative<I, variant<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29> >::type >::type
+get_if( variant<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29> * pv, nonstd_lite_in_place_index_t(I) = in_place<I> )
 {
     return ( pv->index() == I ) ? &get<I>( *pv ) : variant_nullptr;
 }
 
-template< std::size_t I, class T0, class T1, class T2, class T3, class T4, class T5, class T6 >
-inline typename detail::add_pointer< const typename variant_alternative<I, variant<T0, T1, T2, T3, T4, T5, T6> >::type >::type
-get_if( variant<T0, T1, T2, T3, T4, T5, T6> const * pv, nonstd_lite_in_place_index_t(I) = in_place<I> )
+template< std::size_t I, class T0, class T1, class T2, class T3, class T4, class T5, class T6 , class T7, class T8, class T9, class T10, class T11, class T12, class T13, class T14, class T15, class T16, class T17, class T18, class T19, class T20, class T21, class T22, class T23, class T24, class T25, class T26, class T27, class T28, class T29>
+inline typename detail::add_pointer< const typename variant_alternative<I, variant<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29> >::type >::type
+get_if( variant<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29> const * pv, nonstd_lite_in_place_index_t(I) = in_place<I> )
 {
     return ( pv->index() == I ) ? &get<I>( *pv )  : variant_nullptr;
 }
 
-template< class T0, class T1, class T2, class T3, class T4, class T5 >
+template< class T0, class T1, class T2, class T3, class T4, class T5 , class T6, class T7, class T8, class T9, class T10, class T11, class T12, class T13, class T14, class T15, class T16, class T17, class T18, class T19, class T20, class T21, class T22, class T23, class T24, class T25, class T26, class T27, class T28, class T29>
 inline void swap(
-    variant<T0, T1, T2, T3, T4, T5> & a,
-    variant<T0, T1, T2, T3, T4, T5> & b ) variant_noexcept
+    variant<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29 > & a,
+    variant<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29 > & b ) variant_noexcept
 {
     a.swap( b );
 }
@@ -1713,7 +1713,7 @@ inline void swap(
 // It uses the common idiom is to return anrhs variant:
 
 template< class Visitor, class Variant >
-inline Variant visit( Visitor const & vis, Variant const & v )
+inline void visit( Visitor const & vis, Variant const & v )
 {
     if ( v.valueless_by_exception() )
     {
@@ -1729,7 +1729,29 @@ inline Variant visit( Visitor const & vis, Variant const & v )
         case 4: return vis( get<4>( v ) );
         case 5: return vis( get<5>( v ) );
         case 6: return vis( get<6>( v ) );
-        default: return Variant();
+        case 7: return vis( get<7>( v ) );
+        case 8: return vis( get<8>( v ) );
+        case 9: return vis( get<9>( v ) );
+        case 10: return vis( get<10>( v ) );
+        case 11: return vis( get<11>( v ) );
+        case 12: return vis( get<12>( v ) );
+        case 13: return vis( get<13>( v ) );
+        case 14: return vis( get<14>( v ) );
+        case 15: return vis( get<15>( v ) );
+        case 16: return vis( get<16>( v ) );
+        case 17: return vis( get<17>( v ) );
+        case 18: return vis( get<18>( v ) );
+        case 19: return vis( get<19>( v ) );
+        case 20: return vis( get<20>( v ) );
+        case 21: return vis( get<21>( v ) );
+        case 22: return vis( get<22>( v ) );
+        case 23: return vis( get<23>( v ) );
+        case 24: return vis( get<24>( v ) );
+        case 25: return vis( get<25>( v ) );
+        case 26: return vis( get<26>( v ) );
+        case 27: return vis( get<27>( v ) );
+        case 28: return vis( get<28>( v ) );
+        case 29: return vis( get<29>( v ) );
     }
 }
 
@@ -1749,6 +1771,29 @@ struct Comparator
             case 4: return get<4>( v ) == get<4>( w );
             case 5: return get<5>( v ) == get<5>( w );
             case 6: return get<6>( v ) == get<6>( w );
+            case 7: return get<7>( v ) == get<7>( w );
+            case 8: return get<8>( v ) == get<8>( w );
+            case 9: return get<9>( v ) == get<9>( w );
+            case 10: return get<10>( v ) == get<10>( w );
+            case 11: return get<11>( v ) == get<11>( w );
+            case 12: return get<12>( v ) == get<12>( w );
+            case 13: return get<13>( v ) == get<13>( w );
+            case 14: return get<14>( v ) == get<14>( w );
+            case 15: return get<15>( v ) == get<15>( w );
+            case 16: return get<16>( v ) == get<16>( w );
+            case 17: return get<17>( v ) == get<17>( w );
+            case 18: return get<18>( v ) == get<18>( w );
+            case 19: return get<19>( v ) == get<19>( w );
+            case 20: return get<20>( v ) == get<20>( w );
+            case 21: return get<21>( v ) == get<21>( w );
+            case 22: return get<22>( v ) == get<22>( w );
+            case 23: return get<23>( v ) == get<23>( w );
+            case 24: return get<24>( v ) == get<24>( w );
+            case 25: return get<25>( v ) == get<25>( w );
+            case 26: return get<26>( v ) == get<26>( w );
+            case 27: return get<27>( v ) == get<27>( w );
+            case 28: return get<28>( v ) == get<28>( w );
+            case 29: return get<29>( v ) == get<29>( w );
             default: return false;
         }
     }
@@ -1764,6 +1809,29 @@ struct Comparator
             case 4: return get<4>( v ) < get<4>( w );
             case 5: return get<5>( v ) < get<5>( w );
             case 6: return get<6>( v ) < get<6>( w );
+            case 7: return get<7>( v ) < get<7>( w );
+            case 8: return get<8>( v ) < get<8>( w );
+            case 9: return get<9>( v ) < get<9>( w );
+            case 10: return get<10>( v ) < get<10>( w );
+            case 11: return get<11>( v ) < get<11>( w );
+            case 12: return get<12>( v ) < get<12>( w );
+            case 13: return get<13>( v ) < get<13>( w );
+            case 14: return get<14>( v ) < get<14>( w );
+            case 15: return get<15>( v ) < get<15>( w );
+            case 16: return get<16>( v ) < get<16>( w );
+            case 17: return get<17>( v ) < get<17>( w );
+            case 18: return get<18>( v ) < get<18>( w );
+            case 19: return get<19>( v ) < get<19>( w );
+            case 20: return get<20>( v ) < get<20>( w );
+            case 21: return get<21>( v ) < get<21>( w );
+            case 22: return get<22>( v ) < get<22>( w );
+            case 23: return get<23>( v ) < get<23>( w );
+            case 24: return get<24>( v ) < get<24>( w );
+            case 25: return get<25>( v ) < get<25>( w );
+            case 26: return get<26>( v ) < get<26>( w );
+            case 27: return get<27>( v ) < get<27>( w );
+            case 28: return get<28>( v ) < get<28>( w );
+            case 29: return get<29>( v ) < get<29>( w );
             default: return false;
         }
     }
@@ -1771,56 +1839,56 @@ struct Comparator
 
 } //namespace detail
 
-template< class T0, class T1, class T2, class T3, class T4, class T5, class T6 >
+template< class T0, class T1, class T2, class T3, class T4, class T5, class T6 , class T7, class T8, class T9, class T10, class T11, class T12, class T13, class T14, class T15, class T16, class T17, class T18, class T19, class T20, class T21, class T22, class T23, class T24, class T25, class T26, class T27, class T28, class T29>
 inline bool operator==(
-    variant<T0, T1, T2, T3, T4, T5, T6> const & v,
-    variant<T0, T1, T2, T3, T4, T5, T6> const & w )
+    variant<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29> const & v,
+    variant<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29> const & w )
 {
     if      ( v.index() != w.index()     ) return false;
     else if ( v.valueless_by_exception() ) return true;
-    else                                   return detail::Comparator< variant<T0, T1, T2, T3, T4, T5, T6> >::equal( v, w );
+    else                                   return detail::Comparator< variant<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29> >::equal( v, w );
 }
 
-template< class T0, class T1, class T2, class T3, class T4, class T5, class T6 >
+template< class T0, class T1, class T2, class T3, class T4, class T5, class T6 , class T7, class T8, class T9, class T10, class T11, class T12, class T13, class T14, class T15, class T16, class T17, class T18, class T19, class T20, class T21, class T22, class T23, class T24, class T25, class T26, class T27, class T28, class T29>
 inline bool operator!=(
-    variant<T0, T1, T2, T3, T4, T5, T6> const & v,
-    variant<T0, T1, T2, T3, T4, T5, T6> const & w )
+    variant<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29> const & v,
+    variant<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29> const & w )
 {
     return ! ( v == w );
 }
 
-template< class T0, class T1, class T2, class T3, class T4, class T5, class T6 >
+template< class T0, class T1, class T2, class T3, class T4, class T5, class T6 , class T7, class T8, class T9, class T10, class T11, class T12, class T13, class T14, class T15, class T16, class T17, class T18, class T19, class T20, class T21, class T22, class T23, class T24, class T25, class T26, class T27, class T28, class T29>
 inline bool operator<(
-    variant<T0, T1, T2, T3, T4, T5, T6> const & v,
-    variant<T0, T1, T2, T3, T4, T5, T6> const & w )
+    variant<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29> const & v,
+    variant<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29> const & w )
 {
     if      ( w.valueless_by_exception() ) return false;
     else if ( v.valueless_by_exception() ) return true;
     else if ( v.index() < w.index()      ) return true;
     else if ( v.index() > w.index()      ) return false;
-    else                                   return detail::Comparator< variant<T0, T1, T2, T3, T4, T5, T6> >::less_than( v, w );
+    else                                   return detail::Comparator< variant<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29> >::less_than( v, w );
 }
 
-template< class T0, class T1, class T2, class T3, class T4, class T5, class T6 >
+template< class T0, class T1, class T2, class T3, class T4, class T5, class T6 , class T7, class T8, class T9, class T10, class T11, class T12, class T13, class T14, class T15, class T16, class T17, class T18, class T19, class T20, class T21, class T22, class T23, class T24, class T25, class T26, class T27, class T28, class T29>
 inline bool operator>(
-    variant<T0, T1, T2, T3, T4, T5, T6> const & v,
-    variant<T0, T1, T2, T3, T4, T5, T6> const & w )
+    variant<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29> const & v,
+    variant<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29> const & w )
 {
     return w < v;
 }
 
-template< class T0, class T1, class T2, class T3, class T4, class T5, class T6 >
+template< class T0, class T1, class T2, class T3, class T4, class T5, class T6 , class T7, class T8, class T9, class T10, class T11, class T12, class T13, class T14, class T15, class T16, class T17, class T18, class T19, class T20, class T21, class T22, class T23, class T24, class T25, class T26, class T27, class T28, class T29>
 inline bool operator<=(
-    variant<T0, T1, T2, T3, T4, T5, T6> const & v,
-    variant<T0, T1, T2, T3, T4, T5, T6> const & w )
+    variant<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29> const & v,
+    variant<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29> const & w )
 {
     return ! ( v > w );
 }
 
-template< class T0, class T1, class T2, class T3, class T4, class T5, class T6 >
+template< class T0, class T1, class T2, class T3, class T4, class T5, class T6 , class T7, class T8, class T9, class T10, class T11, class T12, class T13, class T14, class T15, class T16, class T17, class T18, class T19, class T20, class T21, class T22, class T23, class T24, class T25, class T26, class T27, class T28, class T29>
 inline bool operator>=(
-    variant<T0, T1, T2, T3, T4, T5, T6> const & v,
-    variant<T0, T1, T2, T3, T4, T5, T6> const & w )
+    variant<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29> const & v,
+    variant<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29> const & w )
 {
     return ! ( v < w );
 }
@@ -1846,10 +1914,10 @@ struct hash< nonstd::monostate >
     }
 };
 
-template< class T0, class T1, class T2, class T3, class T4, class T5, class T6 >
-struct hash< nonstd::variant<T0, T1, T2, T3, T4, T5, T6> >
+template< class T0, class T1, class T2, class T3, class T4, class T5, class T6 , class T7, class T8, class T9, class T10, class T11, class T12, class T13, class T14, class T15, class T16, class T17, class T18, class T19, class T20, class T21, class T22, class T23, class T24, class T25, class T26, class T27, class T28, class T29>
+struct hash< nonstd::variant<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29> >
 {
-    std::size_t operator()( nonstd::variant<T0, T1, T2, T3, T4, T5, T6> const & v ) const variant_noexcept
+    std::size_t operator()( nonstd::variant<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29> const & v ) const variant_noexcept
     {
         return nonstd::variants::detail::hash( v );
     }
