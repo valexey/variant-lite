@@ -1129,29 +1129,29 @@ public:
     variant( T4 const & t4 ) : type_index( 4 ) { new( ptr() ) T4( t4 ); }
     variant( T5 const & t5 ) : type_index( 5 ) { new( ptr() ) T5( t5 ); }
     variant( T6 const & t6 ) : type_index( 6 ) { new( ptr() ) T6( t6 ); }
-    variant( T7 const & t7 ) : type_index( 7 ) { new( ptr() ) T6( t7 ); }
-    variant( T8 const & t8 ) : type_index( 8 ) { new( ptr() ) T6( t8 ); }
-    variant( T9 const & t9 ) : type_index( 9 ) { new( ptr() ) T6( t9 ); }
-    variant( T10 const & t10 ) : type_index( 10 ) { new( ptr() ) T6( t10 ); }
-    variant( T11 const & t11 ) : type_index( 11 ) { new( ptr() ) T6( t11 ); }
-    variant( T12 const & t12 ) : type_index( 12 ) { new( ptr() ) T6( t12 ); }
-    variant( T13 const & t13 ) : type_index( 13 ) { new( ptr() ) T6( t13 ); }
-    variant( T14 const & t14 ) : type_index( 14 ) { new( ptr() ) T6( t14 ); }
-    variant( T15 const & t15 ) : type_index( 15 ) { new( ptr() ) T6( t15 ); }
-    variant( T16 const & t16 ) : type_index( 16 ) { new( ptr() ) T6( t16 ); }
-    variant( T17 const & t17 ) : type_index( 17 ) { new( ptr() ) T6( t17 ); }
-    variant( T18 const & t18 ) : type_index( 18 ) { new( ptr() ) T6( t18 ); }
-    variant( T19 const & t19 ) : type_index( 19 ) { new( ptr() ) T6( t19 ); }
-    variant( T20 const & t20 ) : type_index( 20 ) { new( ptr() ) T6( t20 ); }
-    variant( T21 const & t21 ) : type_index( 21 ) { new( ptr() ) T6( t21 ); }
-    variant( T22 const & t22 ) : type_index( 22 ) { new( ptr() ) T6( t22 ); }
-    variant( T23 const & t23 ) : type_index( 23 ) { new( ptr() ) T6( t23 ); }
-    variant( T24 const & t24 ) : type_index( 24 ) { new( ptr() ) T6( t24 ); }
-    variant( T25 const & t25 ) : type_index( 25 ) { new( ptr() ) T6( t25 ); }
-    variant( T26 const & t26 ) : type_index( 26 ) { new( ptr() ) T6( t26 ); }
-    variant( T27 const & t27 ) : type_index( 27 ) { new( ptr() ) T6( t27 ); }
-    variant( T28 const & t28 ) : type_index( 28 ) { new( ptr() ) T6( t28 ); }
-    variant( T29 const & t29 ) : type_index( 29 ) { new( ptr() ) T6( t29 ); }
+    variant( T7 const & t7 ) : type_index( 7 )    { new( ptr() ) T7( t7 ); }
+    variant( T8 const & t8 ) : type_index( 8 )    { new( ptr() ) T8( t8 ); }
+    variant( T9 const & t9 ) : type_index( 9 )    { new( ptr() ) T9( t9 ); }
+    variant( T10 const & t10 ) : type_index( 10 ) { new( ptr() ) T10( t10 ); }
+    variant( T11 const & t11 ) : type_index( 11 ) { new( ptr() ) T11( t11 ); }
+    variant( T12 const & t12 ) : type_index( 12 ) { new( ptr() ) T12( t12 ); }
+    variant( T13 const & t13 ) : type_index( 13 ) { new( ptr() ) T13( t13 ); }
+    variant( T14 const & t14 ) : type_index( 14 ) { new( ptr() ) T14( t14 ); }
+    variant( T15 const & t15 ) : type_index( 15 ) { new( ptr() ) T15( t15 ); }
+    variant( T16 const & t16 ) : type_index( 16 ) { new( ptr() ) T16( t16 ); }
+    variant( T17 const & t17 ) : type_index( 17 ) { new( ptr() ) T17( t17 ); }
+    variant( T18 const & t18 ) : type_index( 18 ) { new( ptr() ) T18( t18 ); }
+    variant( T19 const & t19 ) : type_index( 19 ) { new( ptr() ) T19( t19 ); }
+    variant( T20 const & t20 ) : type_index( 20 ) { new( ptr() ) T20( t20 ); }
+    variant( T21 const & t21 ) : type_index( 21 ) { new( ptr() ) T21( t21 ); }
+    variant( T22 const & t22 ) : type_index( 22 ) { new( ptr() ) T22( t22 ); }
+    variant( T23 const & t23 ) : type_index( 23 ) { new( ptr() ) T23( t23 ); }
+    variant( T24 const & t24 ) : type_index( 24 ) { new( ptr() ) T24( t24 ); }
+    variant( T25 const & t25 ) : type_index( 25 ) { new( ptr() ) T25( t25 ); }
+    variant( T26 const & t26 ) : type_index( 26 ) { new( ptr() ) T26( t26 ); }
+    variant( T27 const & t27 ) : type_index( 27 ) { new( ptr() ) T27( t27 ); }
+    variant( T28 const & t28 ) : type_index( 28 ) { new( ptr() ) T28( t28 ); }
+    variant( T29 const & t29 ) : type_index( 29 ) { new( ptr() ) T29( t29 ); }
 
 #if variant_CPP11_OR_GREATER
     variant( T0 &&      t0 ) : type_index( 0 ) { new( ptr() ) T0( std::move( t0 ) ); }
